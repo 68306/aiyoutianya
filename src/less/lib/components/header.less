@@ -1,0 +1,163 @@
+@import "../../var";
+@import "../../lib/fragment/source/fadeInUp";
+
+header {
+    position: relative;
+    z-index: 3;
+
+    &.ayty_header {
+        background-color: #fff;
+        padding: 15px 0;
+
+        div.ayty_header_inner {
+            width: 1200px;
+            margin: 0 auto;
+
+            a.ayty_logo {
+                position: relative;
+                float: left;
+                width: 76px;
+                height: 76px;
+                overflow: hidden;
+                border: 2px solid @c-main;
+                border-radius: 9999px;
+
+                img {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    margin-top: -8px;
+                    margin-left: -21px;
+                    z-index: 1;
+                    transition: all .6s ease;
+
+                    &.l_default {
+                        z-index: 2;
+                    }
+                }
+
+                span {
+                    position: absolute;
+                    left: -100px;
+                    font-size: 28px;
+                    color: @c-main;
+                    font-weight: bold;
+                }
+
+                &:hover {
+                    background-color: @c-main;
+
+                    img.l_default {
+                        opacity: 0;
+                    }
+                }
+            }
+
+            nav.ayty_nav {
+                float: right;
+
+                & > a, & > span {
+                    position: relative;
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin-left: 20px;
+                    line-height: 80px;
+                    color: @grey-bf;
+                    text-shadow: 0 0 1px rgba(191,191,189,0.3);
+                    cursor: pointer;
+
+                    &:before {
+                        content: attr(data-hover);
+                        position: absolute;
+                        width: 100%;
+                        opacity: 0;
+                        transform: scale(1.1) translateX(10px) translateY(-10px) rotate(4deg);
+                        transition: transform 0.2s, opacity 0.2s;
+                        pointer-events: none;
+                        color: @t-def;
+                        text-shadow: 0 0 1px rgba(79,79,79,0.3);
+                    }
+
+                    &:hover {
+                        &:before {
+                            -moz-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+                            transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                & > span {
+                    display: inline-block;
+
+                    &:before {
+                        display: none;
+                    }
+
+                    &:hover {
+                        color: @t-def;
+                        text-shadow: 0 0 1px rgba(79,79,79,0.3);
+                    }
+
+                    ul {
+                        display: none;
+                        position: absolute;
+                        left: 50%;
+                        top: 70px;
+                        width: 150px;
+                        margin-left: -75px;
+                        background-color: rgba(191,191,189,.9);
+                        padding: 10px 0;
+                        border-radius: 2px;
+
+                        &:before {
+                            position: absolute;
+                            left: 50%;
+                            top: -10px;
+                            margin-left: -10px;
+                            content: '';
+                            width: 0;
+                            height: 0;
+                            font-size: 0;
+                            line-height: 0;
+                            border-width: 0 10px 10px 10px;
+                            border-style: solid dashed;
+                            border-color: transparent transparent rgba(191,191,189,.9) transparent;
+                        }
+                        
+                        li {
+                            height: 30px;
+                            line-height: 30px;
+                            
+                            a {
+                                display: block;
+                                padding: 0 10px;
+                                color: @t-def;
+                                text-align: center;
+                                font-weight: normal;
+                                text-shadow: 0 0 14px rgba(191,191,189,.6);
+                                transition: background-color .3s ease-out;
+                            }
+
+                            &:hover {
+                                background-color: @c-main;
+
+                                a {
+                                    color: #fff;
+                                    text-shadow: 0 0 20px #fff;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        ul {
+                            display: block;
+                            animation: fadeInUp .4s ease-out both;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@import "../../var";
+
+.ayty-tt (@tt-width:4em) {
+    position: relative;
+    height: 34px;
+    line-height: 34px;
+    font-size: 18px;
+    color: @c-main;
+    border-bottom: 2px solid @line;
+    margin-bottom: 10px;
+
+    &:after {
+        position: absolute;
+        content: '';
+        width: @tt-width;
+        height: 2px;
+        background-color: @c-main;
+        bottom: -2px;
+        left: 0;
+    }
+}
+
+h2.ayty_tt {
+   .ayty-tt();
+}
