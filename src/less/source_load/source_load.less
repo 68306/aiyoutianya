@@ -1,0 +1,28 @@
+@import "../var";
+@import "source/lib";
+
+div.source_list {
+    width: 1200px;
+    margin: 60px auto;
+
+    h2.tt {
+        font-size: 18px;
+        color: @c-main;
+        margin: 15px 0;
+        padding-left: 10px;
+        border-left: 3px solid @c-main;
+    }
+
+    ul {
+        margin-bottom: 20px;
+
+        li {
+            padding: 10px 0;
+            border-bottom: 1px dashed @line;
+
+            a {
+                font-size: 16px;
+            }
+        }
+    }
+}

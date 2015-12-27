@@ -122,6 +122,14 @@ require(['particlesJS'], function (particlesJS) {
             }
 
         );
+
+        $('a.praise').on('click', function(){
+            $(this).addClass('button_click');
+        });
+
+        $('a.tread').on('click', function(){
+            $(this).addClass('button_click');
+        });
     })
 
 });

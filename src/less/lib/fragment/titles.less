@@ -1,6 +1,6 @@
 @import "../../var";
 
-.ayty-tt (@tt-width:4em) {
+h2.ayty_tt {
     position: relative;
     height: 34px;
     line-height: 34px;
@@ -12,14 +12,10 @@
     &:after {
         position: absolute;
         content: '';
-        width: @tt-width;
+        width: 4em;
         height: 2px;
         background-color: @c-main;
         bottom: -2px;
         left: 0;
     }
-}
-
-h2.ayty_tt {
-   .ayty-tt();
 }

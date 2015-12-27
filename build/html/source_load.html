@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>哎呀天呀-资源下载页面</title>
+    <!--[if lte IE 9]>
+    <script src="../js/html5shiv.js"></script>
+    <script src="../js/jquery-1.11.0.min.js"> </script>
+    <!--[if gt IE 9]><!-->
+    <script src="../js/jquery-2.1.0.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/source_load/source_load.css"/>
+    <script>
+        var require = {
+            baseUrl: '/js/site/'
+        }
+    </script>
+    <script data-main="source_load" src="/js/require.js"></script>
+</head>
+<body>
+<!--头部-->
+
+
+<header class="ayty_header clearfix">
+    <div class="ayty_header_inner">
+        <a href="index" class="ayty_logo">
+            <img src="../images/logo.png" alt="" class="l_default"/>
+            <img src="../images/logo_hover.png" alt="" class="l_hover"/>
+            <span>sun</span>
+        </a>
+       <nav class="ayty_nav">
+           <span data-hover="文章分类">文章分类
+                <ul>
+                    <li>
+                        <a href="">css</a>
+                    </li>
+                    <li>
+                        <a href="">php</a>
+                    </li>
+                </ul>
+           </span><a href="source_load" data-hover="资源">资源</a><a href="" data-hover="关于我们">关于我们</a>
+       </nav>
+    </div>
+</header>
+
+<!--banner-->
+<div class="ayty_banner article_title c-red">
+    <div id="particles-js"></div>
+    <h1>哎呦天呀资源共享</h1>
+    <p class="article_tt">分享快乐</p>
+</div>
+
+<!--资源列表-->
+<div class="source_list">
+    <h2 class="ayty_tt">CSS资源</h2>
+    <ul>
+        <li>
+            <a href="">CSS权威指南</a>
+        </li>
+        <li>
+            <a href="">CSS权威指南</a>
+        </li>
+        <li>
+            <a href="">CSS权威指南</a>
+        </li>
+        <li>
+            <a href="">CSS权威指南</a>
+        </li>
+        <li>
+            <a href="">CSS权威指南</a>
+        </li>
+    </ul>
+    <h2 class="ayty_tt">PHP资源</h2>
+    <ul>
+        <li>
+            <a href="">PHP权威指南</a>
+        </li>
+        <li>
+            <a href="">PHP权威指南</a>
+        </li>
+        <li>
+            <a href="">PHP权威指南</a>
+        </li>
+        <li>
+            <a href="">PHP权威指南</a>
+        </li>
+        <li>
+            <a href="">PHP权威指南</a>
+        </li>
+    </ul>
+    <!--评论分页-->
+    
+
+<div class="ayty_page">
+    <ul>
+        <li>
+            <a href="" class="current">1</a>
+        </li>
+        <li>
+            <a href="">2</a>
+        </li>
+        <li>
+            <a href="">3</a>
+        </li>
+        <li>
+            <a href="">4</a>
+        </li>
+        <li>
+            <a href="">5</a>
+        </li>
+        <li>
+            <a href="">6</a>
+        </li>
+    </ul>
+</div>
+</div>
+
+<!--footer-->
+
+
+<footer class="ayty_footer">
+    <h2>你好</h2>
+    <aside>
+        <ul>
+            <li>
+                <span class="iconfont">&#xe628;</span>
+            </li>
+            <li>
+                <span class="iconfont">&#xe689;</span>
+            </li>
+            <li>
+                <span class="iconfont">&#xe6a4;</span>
+            </li>
+            <li>
+                <span class="iconfont">&#xe6a1;</span>
+            </li>
+            <li>
+                <span class="iconfont">&#xe6b2;</span>
+            </li>
+        </ul>
+    </aside>
+    <p>© 2015 Copyright.</p>
+</footer>
+
+
+<script src="../js/utils/particles.min.js"></script>
+<script>
+    $(function() {
+        $('a.praise').on('click', function(){
+            $(this).addClass('button_click');
+        });
+
+        $('a.tread').on('click', function(){
+            $(this).addClass('button_click');
+        });
+    });
+</script>
+</body>
+</html>

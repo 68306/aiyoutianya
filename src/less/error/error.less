@@ -1,0 +1,84 @@
+@import "../var";
+
+@-webkit-keyframes stroke {
+    100% {
+        stroke-dashoffset: -400;
+    }
+}
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: -400;
+    }
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: @c-main;
+
+    div.content {
+        font: 800 14.5em/1  'Open Sans', Impact;
+
+        svg {
+            width: 90%;
+            margin: 0 auto 0 auto;
+            display: block;
+            text-transform: uppercase;
+
+            .text {
+                fill: none;
+                stroke-width: 6;
+                stroke-linejoin: round;
+                stroke-dasharray: 70 330;
+                stroke-dashoffset: 0;
+                animation: stroke 6s infinite linear;
+
+                &:nth-child(5n + 1) {
+                    stroke: @pink;
+                    animation-delay: -1.2s;
+                }
+
+                &:nth-child(5n + 2) {
+                    stroke: @yellow;
+                    animation-delay: -2.4s;
+                }
+
+                &:nth-child(5n + 3) {
+                    stroke: @blue;
+                    animation-delay: -3.6s;
+                }
+
+                &:nth-child(5n + 4) {
+                    stroke: @red;
+                    -webkit-animation-delay: -4.8s;
+                    animation-delay: -4.8s;
+                }
+
+                &:nth-child(5n + 5) {
+                    stroke: @green;
+                    animation-delay: -6s;
+                }
+
+            }
+        }
+    }
+
+    nav.back_home {
+        text-align: center;
+        font-size: 30px;
+
+        a {
+            color: #fff;
+            text-shadow: 1px 1px 1px #000;
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}
+
+
+
